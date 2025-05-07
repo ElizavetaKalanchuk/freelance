@@ -6,7 +6,7 @@ import ru.netology.FreelanceService.services.FreelanceService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FreelanceServiceTest {
+public class FreelanceServiceTest {  // Явное объявление класса
     @Test
     public void testExample1() {
         FreelanceService service = new FreelanceService();
@@ -22,7 +22,7 @@ public class FreelanceServiceTest {
     @Test
     public void testAllVacation() {
         FreelanceService service = new FreelanceService();
-        assertEquals(12, service.calculateVacationMonths(50_000, 10_000, 10_000));
+        assertEquals(8, service.calculateVacationMonths(50_000, 10_000, 10_000));
     }
 }
 

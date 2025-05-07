@@ -1,15 +1,15 @@
 package ru.netology.FreelanceService.services;
 
-public class FreelanceService {
+public class FreelanceService {  // Явное объявление класса
     public int calculateVacationMonths(int income, int expenses, int threshold) {
         int vacationMonths = 0;
         int balance = 0;
 
         for (int month = 1; month <= 12; month++) {
-            if (balance >= threshold || (income - expenses) * 3 >= threshold) {
+            if (balance >= threshold) {
                 vacationMonths++;
                 balance -= expenses;
-                balance = balance > 0 ? balance / 3 : 0;
+                balance /= 3;
             } else {
                 balance += income - expenses;
             }
